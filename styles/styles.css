@@ -149,22 +149,30 @@ body {
   align-items: center;
 }
 
-.navbar input {
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+.topbar button {
+  background-color: var(--text);
+  color: var(--bg);
   border: none;
-  background: var(--bg-alt);
-  color: var(--text);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0.5em 1.5em;
 }
 
 .cards {
   display: flex;
   gap: 1rem;
   margin: 2rem 0;
+  flex-wrap: wrap;
 }
 
 .card {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+
+  /* flex: 1; */
+
   background: var(--bg-alt);
   padding: 1.5rem;
   border-radius: 8px;
@@ -176,9 +184,29 @@ body {
   color: var(--accent);
 }
 
+.analytics-section {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
 .table-section {
   margin-top: 2rem;
+  overflow-x: scroll;
+  flex-grow: 1;
 }
+
+.table-section::-webkit-scrollbar {
+  display: none;
+  /* height: 40px; */
+}
+
+/* .table-section::-webkit-scrollbar-track {
+  /* display: none; */
+/* height: 40px; */
+/* background-color: #1e1e2f; */
+/* } */
 
 table {
   width: 100%;
@@ -222,6 +250,8 @@ th {
 
 .chart-section {
   margin-top: 2rem;
+  flex-grow: 2;
+  min-width: 400px;
 }
 
 .chart-placeholder {
@@ -277,7 +307,10 @@ th {
 
 .progress-section {
   margin-top: 2rem;
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 400px;
 }
 
 .progress-item {
@@ -337,7 +370,7 @@ th {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* NOT responsive */
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
 }
 
@@ -366,4 +399,52 @@ th {
   margin: 0;
   font-size: 0.85rem;
   color: #aaa;
+}
+
+@media (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar input {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  th {
+    min-width: 100px;
+  }
+
+  td {
+    min-width: 100px;
+  }
+
+  .analytics-section {
+    min-width: 300px;
+    overflow-x: scroll;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .progress-section {
+    padding: 0;
+    min-width: 0;
+  }
 }
