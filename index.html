@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Dashboard</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <h1 class="logo">Company</h1>
+        <nav class="nav-links">
+          <a href="#">Dashboard</a>
+          <a href="#">Projects</a>
+          <a href="#">Team</a>
+          <a href="#">Settings</a>
+        </nav>
+      </div>
+
+      <input type="text" placeholder="Search..." />
+
+      <div class="nav-right">
+        <div class="icon-bell">🔔</div>
+        <div class="user-menu">
+          <img src="https://i.pravatar.cc/40?img=6" alt="User" />
+          <span class="username">Mohammad</span>
+          <span class="dropdown">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <nav>
+          <a href="#">Overview</a>
+          <a href="#">Reports</a>
+          <a href="#">Analytics</a>
+          <a href="#">Settings</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <h1>Welcome Back</h1>
+        </header>
+
+        <section class="cards">
+          <div class="card">
+            <h3>Total Users</h3>
+            <p>12,345</p>
+          </div>
+          <div class="card">
+            <h3>Revenue</h3>
+            <p>$76,800</p>
+          </div>
+          <div class="card">
+            <h3>Orders</h3>
+            <p>1,245</p>
+          </div>
+          <div class="card">
+            <h3>Growth</h3>
+            <p>24%</p>
+          </div>
+        </section>
+
+        <section class="table-section">
+          <h2>Recent Transactions</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jane Doe</td>
+                <td>2025-06-24</td>
+                <td>$120</td>
+                <td class="status success">Completed</td>
+              </tr>
+              <tr>
+                <td>John Smith</td>
+                <td>2025-06-23</td>
+                <td>$89</td>
+                <td class="status pending">Pending</td>
+              </tr>
+              <tr>
+                <td>Alice Lee</td>
+                <td>2025-06-22</td>
+                <td>$300</td>
+                <td class="status failed">Failed</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="chart-section">
+          <h2>Monthly Stats</h2>
+          <div class="chart-placeholder">
+            <!-- Chart.js or canvas could go here -->
+            <p>[Chart Placeholder]</p>
+          </div>
+        </section>
+
+        <section class="">
+          <div class="timeline-section">
+            <h2>Activity Timeline</h2>
+            <ul class="timeline">
+              <li>
+                <div class="time">09:30 AM</div>
+                <div class="event">
+                  <h4>User Login</h4>
+                  <p>John Smith logged in from IP 192.168.1.101</p>
+                </div>
+              </li>
+              <li>
+                <div class="time">10:15 AM</div>
+                <div class="event">
+                  <h4>Payment Received</h4>
+                  <p>$320 from Jane Doe via PayPal</p>
+                </div>
+              </li>
+              <li>
+                <div class="time">11:45 AM</div>
+                <div class="event">
+                  <h4>System Alert</h4>
+                  <p>High memory usage on Server #2</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="progress-section">
+            <div class="progress-item">
+              <label>Deployment</label>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <label>Database Backup</label>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <label>UI Improvements</label>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="notifications-section">
+          <h2>System Notifications</h2>
+          <div class="notification warning">
+            <strong>⚠ Warning:</strong> Low disk space on Server #3
+          </div>
+          <div class="notification info">
+            <strong>ℹ Info:</strong> A new version is available for update
+          </div>
+          <div class="notification error">
+            <strong>⛔ Error:</strong> Payment processing service unreachable
+          </div>
+        </section>
+
+        <section class="team-section">
+          <h2>Team Members</h2>
+          <div class="team-grid">
+            <div class="member-card">
+              <img src="https://i.pravatar.cc/150?img=1" alt="Member 1" />
+              <div>
+                <h4>Sarah Khalil</h4>
+                <p>Project Manager</p>
+              </div>
+            </div>
+            <div class="member-card">
+              <img src="https://i.pravatar.cc/150?img=2" alt="Member 2" />
+              <div>
+                <h4>Ali Zaher</h4>
+                <p>Backend Developer</p>
+              </div>
+            </div>
+            <div class="member-card">
+              <img src="https://i.pravatar.cc/150?img=3" alt="Member 3" />
+              <div>
+                <h4>Nora Hamed</h4>
+                <p>Frontend Developer</p>
+              </div>
+            </div>
+            <div class="member-card">
+              <img src="https://i.pravatar.cc/150?img=4" alt="Member 4" />
+              <div>
+                <h4>Jad El-Masri</h4>
+                <p>DevOps Engineer</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
